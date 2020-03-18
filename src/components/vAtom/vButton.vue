@@ -4,8 +4,7 @@
   </button>
 </template>
 <style lang="sass">
-  .vButton
-    position: absolute
+
 </style>
 <script lang="ts">
 import Vue from 'vue'
