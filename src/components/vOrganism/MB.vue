@@ -1,14 +1,22 @@
 <template>
   <div class="MB">
-    <h1>Mandlebroght set</h1>
+    <h1>{{ title }}</h1>
+    {{vuexStore}}
     <VControls /><vImage />
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, } from "vue-property-decorator";
 import vImage from "../vAtom/vImage.vue";
+import store from "../../store";
 import VControls from "../vMolecule/vControls.vue";
 @Component({
+  data: () => {
+    return { 'title': "hello" }
+     },
+     computed: {
+       vuexStore: () => { return store.state.title }
+     },
   components: {
     VControls,
     vImage
