@@ -10,12 +10,14 @@ import { Component, Vue, } from "vue-property-decorator";
 import vImage from "../vAtom/vImage.vue";
 import store from "../../store";
 import VControls from "../vMolecule/vControls.vue";
+
+
 @Component({
   data: () => {
     return { 'title': "hello" }
      },
      computed: {
-       vuexStore: () => { return store.state.title }
+       vuexStore: () => { return store.state}
      },
   components: {
     VControls,

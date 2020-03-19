@@ -1,13 +1,11 @@
-import Vue from "vue";
-import Vuex from "vuex";
-
+import Vue from "vue"
+import Vuex from "vuex"
+import MB from "../container/MB"
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    title: 'hello world from vuex'
-  },
+  state: { },
   mutations: {},
   actions: {},
-  modules: {}
+  modules: { MB }
 });
