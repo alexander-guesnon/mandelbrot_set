@@ -1,6 +1,7 @@
 <template>
   <div class="MB">
     <h1>{{ title }}</h1>
+    <div>{{ nsfdsafdsafdsa }}</div>
     <VControls /><vImage />
   </div>
 </template>
@@ -12,8 +13,8 @@ import VControls from "../vMolecule/vControls.vue";
 
 
 @Component({
-     computed: {
-       title: () => { return store.state.MB.title}
+      computed: {
+       title: () => { return store.getters.title }
      },
   components: {
     VControls,

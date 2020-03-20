@@ -1,8 +1,6 @@
 <template lang="pug">
   div.vControls
-    each val in ['♻️','💤','➕','➖','⬆️','➡️','⬇️','⬅️']
-      vButton
-        |#{val} 
+    | CONTROLER
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
