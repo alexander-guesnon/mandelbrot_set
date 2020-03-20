@@ -15,17 +15,17 @@ class ControlPanel {
 
 }
 //CONSTANTS
-const  RECYCLE = "RECYCLE"
-const  SLEEP = "SLEEP"
-const  ZOOM_IN = "ZOOM_IN"
-const  ZOOM_OUT = "ZOOM_OUT"
-const  UP = "UP"
-const  DOWN  = "DOWN"
-const  LEFT = "LEFT"
-const  RIGHT = "RIGHT"
+export const  RESTART = "RESTART"
+export const  SLEEP = "SLEEP"
+export const  ZOOM_IN = "ZOOM_IN"
+export const  ZOOM_OUT = "ZOOM_OUT"
+export const  UP = "UP"
+export const  DOWN  = "DOWN"
+export const  LEFT = "LEFT"
+export const  RIGHT = "RIGHT"
 //CONSTANTS
-const actions = [
-  RECYCLE,
+const listOfActions = [
+  RESTART,
   SLEEP,
   ZOOM_IN,
   ZOOM_OUT,
@@ -47,7 +47,7 @@ const icons = [
 const buttons = icons.map( icon => new Button(icon) )
 
 const state = {
-  title: buttons,
+  title: "Mandel brot set",
   ControlPanel(){ return buttons },
 }
 const getters = {
@@ -56,11 +56,36 @@ const getters = {
   }
 
 const mutations = {
-
+  testingF(state){
+  console.log("state change");
+  }
 }
 
 const actions = {
-
+  VRESTART( context ){
+    context.commit('testingF')
+  },
+  Vsleep( context ){
+    context.commit(SLEEP)
+  },
+  VzoomIn( context ){
+    context.commit(ZOOM_IN)
+  },
+  VzoomOut( context ){
+    context.commit(ZOOM_OUT)
+  },
+  Vup( context ){
+    context.commit(UP)
+  },
+  Vdown( context ){
+    context.commit(DOWN)
+  },
+  Vleft( context ){
+    context.commit(LEFT)
+  },
+  Vright( context ){
+    context.commit(RIGHT)
+  }
 }
 
 

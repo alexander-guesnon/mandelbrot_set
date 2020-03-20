@@ -1,4 +1,4 @@
-<template funcional>
+<template>
   <canvas class="vImage" :width="vWidth" :height="vHight"></canvas>
 </template>
 

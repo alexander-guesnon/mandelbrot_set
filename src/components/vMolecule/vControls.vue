@@ -1,15 +1,18 @@
-<template lang="pug">
-  div.vControls
-    | CONTROLER
+<template>
+  <div class="vControls">
+    <VButton >fdsafd</VButton>
+  </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import vButton from "../vAtom/vButton.vue";
+import VButton from "../vAtom/vButton.vue";
+import {RESTART} from "../../container/MB"
+import store from '../../store'
 @Component({
   components: {
-    vButton
+    VButton
   }
-})
+  })
 export default class VControls extends Vue {}
 </script>
 
