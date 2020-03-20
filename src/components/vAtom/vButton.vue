@@ -1,3 +1,4 @@
+<!--todo make functional and pass class down to it-->
 <template>
   <button @click="ClickAction" class="vButton" >
     {{ buttonText }}
