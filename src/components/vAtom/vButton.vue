@@ -1,6 +1,6 @@
 <template>
-  <button @click="testing" class="vButton" >
-    <slot>I am a button</slot>
+  <button @click="ClickAction" class="vButton" >
+    {{ buttonText }}
   </button>
 </template>
 <style lang="sass">
@@ -11,11 +11,22 @@ import { Component, Vue, } from "vue-property-decorator";
 import store from '../../store'
 
 @Component({
+  props:{
+   buttonAction: {
+     type: String,
+     required: false,
+     default: "NA"
+   }, 
+   buttonText:{
+     type: String,
+     required: false,
+     default: "this is a button"
+   }
+  },
   methods: {
-    testing:()=>{
-      console.log("testing") 
-      store.dispatch("VRESTART");
-      }
+    ClickAction(){
+      console.log(this.buttonAction)
+    }
   }
 })
 

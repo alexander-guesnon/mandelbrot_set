@@ -1,6 +1,8 @@
 <template>
   <div class="vControls">
-    <VButton >fdsafd</VButton>
+    <template>
+      <VButton></VButton>
+    </template>
   </div>
 </template>
 <script lang="ts">
