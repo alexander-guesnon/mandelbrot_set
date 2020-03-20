@@ -1,7 +1,6 @@
 <template>
   <div class="MB">
     <h1>{{ title }}</h1>
-    {{vuexStore}}
     <VControls /><vImage />
   </div>
 </template>
@@ -13,11 +12,8 @@ import VControls from "../vMolecule/vControls.vue";
 
 
 @Component({
-  data: () => {
-    return { 'title': "hello" }
-     },
      computed: {
-       vuexStore: () => { return store.state}
+       title: () => { return store.state.MB.title}
      },
   components: {
     VControls,
