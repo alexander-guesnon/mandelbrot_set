@@ -1,7 +1,7 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton></VButton>
+      <VButton @click="SomClick" class="d" >ggfsgfds</VButton>
     </template>
   </div>
 </template>
@@ -13,8 +13,13 @@ import store from '../../store'
 @Component({
   components: {
     VButton
-  }
-  })
+  },
+methods: {
+ SomClick(){
+   console.log("hello world")
+ } 
+}
+})
 export default class VControls extends Vue {}
 </script>
 

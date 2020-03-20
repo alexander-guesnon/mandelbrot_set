@@ -12,11 +12,6 @@ import store from '../../store'
 
 @Component({
   props:{
-   buttonAction: {
-     type: String,
-     required: false,
-     default: "NA"
-   }, 
    buttonText:{
      type: String,
      required: false,
@@ -25,7 +20,7 @@ import store from '../../store'
   },
   methods: {
     ClickAction(){
-      console.log(this.buttonAction)
+      this.$emit('click')
     }
   }
 })
