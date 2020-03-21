@@ -1,7 +1,7 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton>{{buttons}}</VButton>
+      <VButton v-for="(button, index) in buttons" :key="index">{{button.button}}</VButton>
     </template>
   </div>
 </template>
@@ -14,7 +14,7 @@ import VButton from "../vAtom/vButton.vue";
   },
   computed:{
     buttons: function() {
-      return this.$store.getters
+      return this.$store.getters.buttons
     }
   }
 })
