@@ -1,24 +1,22 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton @click="SomClick" class="d" >ggfsgfds</VButton>
+      <VButton>{{buttons}}</VButton>
     </template>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import VButton from "../vAtom/vButton.vue";
-import {RESTART} from "../../container/MB"
-import store from '../../store'
 @Component({
   components: {
     VButton
   },
-methods: {
- SomClick(){
-   console.log("hello world")
- } 
-}
+  computed:{
+    buttons: function() {
+      return this.$store.getters
+    }
+  }
 })
 export default class VControls extends Vue {}
 </script>

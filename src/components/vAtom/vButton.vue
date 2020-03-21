@@ -9,8 +9,6 @@
 </style>
 <script lang="ts">
 import { Component, Vue, } from "vue-property-decorator";
-import store from '../../store'
-
 @Component({
   props:{
    buttonText:{

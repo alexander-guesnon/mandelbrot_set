@@ -7,13 +7,14 @@
 <script lang="ts">
 import { Component, Vue, } from "vue-property-decorator"
 import vImage from "../vAtom/vImage.vue"
-import store from "../../store"
 import VControls from "../vMolecule/vControls.vue"
 
 
 @Component({
       computed: {
-       title: () => { return store.getters.title }
+       title(){
+         return this.$store.getters.title
+       } 
      },
     components: {
     VControls,

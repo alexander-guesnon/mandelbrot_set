@@ -2,9 +2,9 @@
 class Button {
   button: string
   action: string
-  constructor(icon: string){
+  constructor(icon: string, action: string){
     this.button = icon
-    this.action = ''
+    this.action = action
   }
 }
 class ControlPanel {
@@ -24,16 +24,18 @@ export const  DOWN  = "DOWN"
 export const  LEFT = "LEFT"
 export const  RIGHT = "RIGHT"
 //CONSTANTS
+const LANGTH_ARRAY = 8
 const listOfActions = [
   RESTART,
   SLEEP,
   ZOOM_IN,
   ZOOM_OUT,
   UP,
+  RIGHT,
   DOWN,
-  LEFT,
-  RIGHT
+  LEFT
 ]
+
 const icons = [
   '♻️',
   '💤',
@@ -44,11 +46,20 @@ const icons = [
   '⬇️',
   '⬅️'
 ]
-const buttons = icons.map( icon => new Button(icon) )
+
+function createButtons(){
+  const temp = []
+  for (let i = 0; i < LANGTH_ARRAY; i++ ){
+    temp.push(new Button(icons[i], listOfActions[i] )) 
+  }  
+  return temp
+}
+
+const buttons = createButtons() 
 
 const state = {
   title: "Mandel brot set",
-  ControlPanel(){ return buttons },
+  ControlPanel: buttons,
 }
 const getters = {
     title: ( state, getters) => {  return state.title  },
