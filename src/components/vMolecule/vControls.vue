@@ -1,7 +1,7 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton v-for="(button, index) in buttons" :key="index">{{button.button}}</VButton>
+      <VButton v-for="(b, index) in buttons" :key="index"> {{b.button}} </VButton>
     </template>
   </div>
 </template>
