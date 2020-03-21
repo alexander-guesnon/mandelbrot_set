@@ -1,7 +1,11 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton v-for="(b, index) in buttons" :key="index"> {{b.button}} </VButton>
+      <VButton 
+      v-for="(b, index) in buttons"
+      @click="buttonClick(b.action)"
+      :key="index"
+      > {{b.button}} </VButton>
     </template>
   </div>
 </template>
@@ -11,6 +15,11 @@ import VButton from "../vAtom/vButton.vue";
 @Component({
   components: {
     VButton
+  },
+  methods:{
+    buttonClick: function(action) {
+      this.$store.dispatch(action)
+    }
   },
   computed:{
     buttons: function() {
