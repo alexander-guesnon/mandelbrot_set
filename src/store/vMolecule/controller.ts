@@ -66,31 +66,31 @@ import {
   
   const mutations = {
     RESTART(state){
-
+      console.log(RESTART)
     },
     UP(state){
-
+      console.log(UP)
     },
     SLEEP(state){
-    
+      console.log(SLEEP)
     },
     LEFT(state){
-    
+      console.log(LEFT)
     },
     FREE(state){
-      
+      console.log("FREE")
     },
     RIGHT(state){
-    
+      console.log(RIGHT)
     },
     ZOOM_IN(state){
-
+      console.log(ZOOM_IN)
     },
     DOWN(state){
-
+      console.log(DOWN)
     },
     ZOOM_OUT(state){
-      
+      console.log(ZOOM_OUT)
     }
 }
 
