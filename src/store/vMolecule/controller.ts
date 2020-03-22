@@ -15,25 +15,28 @@ import {
         const NUM_BUTTONS = 9
         const icons = [
             '♻️',
-            '💤',
-            '➕',
-            '➖',
-            '🃏',
             '⬆️',
+            '💤',
+            
+            '⬅️',
+
+            '🃏',
             '➡️',
+            
+            '➕',
             '⬇️',
-            '⬅️'
+            '➖'
           ]
         const listOfAction = [
             RESTART,
-            SLEEP,
-            ZOOM_IN,
-            ZOOM_OUT,
-            "FREE",
             UP,
             RIGHT,
+            LEFT,
+            "FREE",
+            SLEEP,
+            ZOOM_IN,
             DOWN,
-            LEFT
+            ZOOM_OUT,
         ]
         for (let i = 0; i < NUM_BUTTONS; i++) {
             output.push(new Button(icons[i], listOfAction[i]))
