@@ -60,10 +60,38 @@ import {
     RIGHT(context){context.commit(RIGHT)},
     ZOOM_IN(context){context.commit(ZOOM_IN)},
     DOWN(context){context.commit(DOWN)},
-    ZOOM_OUT(context){context.commit(ZOOM_OUT)},
+    ZOOM_OUT(context){context.commit(ZOOM_OUT)}
   }
+
   
   const mutations = {
+    RESTART(state){
+
+    },
+    UP(state){
+
+    },
+    SLEEP(state){
+    
+    },
+    LEFT(state){
+    
+    },
+    FREE(state){
+      
+    },
+    RIGHT(state){
+    
+    },
+    ZOOM_IN(state){
+
+    },
+    DOWN(state){
+
+    },
+    ZOOM_OUT(state){
+      
+    }
 }
 
   export default {
