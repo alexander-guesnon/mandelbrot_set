@@ -52,6 +52,15 @@ import {
   }
   
   const actions = {
+    RESTART(context){context.commit(RESTART)},
+    UP(context){context.commit(UP)},
+    SLEEP(context){context.commit(SLEEP)},
+    LEFT(context){context.commit(LEFT)},
+    FREE(context){context.commit("FREE")},
+    RIGHT(context){context.commit(RIGHT)},
+    ZOOM_IN(context){context.commit(ZOOM_IN)},
+    DOWN(context){context.commit(DOWN)},
+    ZOOM_OUT(context){context.commit(ZOOM_OUT)},
   }
   
   const mutations = {
