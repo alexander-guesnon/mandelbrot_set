@@ -1,4 +1,9 @@
 // mande bnrot set
+//screen split store
+class Screen {
+  hight
+  width
+}
 class Button {
   button: string
   action: string
