@@ -17,12 +17,9 @@ import {
             '♻️',
             '⬆️',
             '💤',
-            
             '⬅️',
-
             '🃏',
             '➡️',
-            
             '➕',
             '⬇️',
             '➖'
@@ -30,10 +27,10 @@ import {
         const listOfAction = [
             RESTART,
             UP,
-            RIGHT,
+            SLEEP,
             LEFT,
             "FREE",
-            SLEEP,
+            RIGHT,
             ZOOM_IN,
             DOWN,
             ZOOM_OUT,
