@@ -1,11 +1,11 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton 
+    <VButton 
       v-for="(b, index) in buttons"
       @click="buttonClick(b.action)"
       :key="index"
-      > {{b.button}} </VButton>
+      > {{b.icon}} </VButton>
     </template>
   </div>
 </template>
