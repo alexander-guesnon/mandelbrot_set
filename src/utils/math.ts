@@ -28,5 +28,18 @@ class complexNumbers {
     const R = this.real * temp.real
     const I = this.imaginary 
   }
-
+  divide(temp:complexNumbers){
+    /**
+     * a+bi   c-di  
+     * ---- * ---- 
+     * c+di   c-di      
+     * 
+     * 
+     * ac + bd     bc - ad
+     * ------- + i -------
+     * c^2 + d^2   c^2 + d^2
+     * */ 
+    const R = this.real * temp.real
+    const I = this.imaginary 
+  }
 }
