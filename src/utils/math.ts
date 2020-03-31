@@ -14,4 +14,10 @@ class complexNumbers {
     const R = this.real + temp.real
     return new complexNumbers(R,I)
   }
+  sub(temp:complexNumbers){
+    const I = this.imaginary - temp.imaginary
+    const R = this.real - temp.real
+    return new complexNumbers(R,I)
+  }
+  
 }
