@@ -13,7 +13,6 @@ c = MB when c < |z_n|
 ex
 c = 1
 
-
 n = {0,1,2,3,4,5,6,7,8,9} if this set dosnt get bigger than 
 f(n) = (n)^2 + 1
 
@@ -21,6 +20,10 @@ n = goes to infinity
 high n is the more accurate the image is
 
 
+c is on the complex plane
+
+-1 - 1
+-i - i
 
 */
 function mandlebrot_set () {
