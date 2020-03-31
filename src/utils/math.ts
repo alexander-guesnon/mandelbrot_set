@@ -19,5 +19,14 @@ class complexNumbers {
     const R = this.real - temp.real
     return new complexNumbers(R,I)
   }
-  
+  multiply(temp:complexNumbers){
+    //cycle i = sqrt(-1)
+    // i * i = -1
+    // i * -1 = -i
+    // i * -i = -(-1) = 1
+    // i * 1 =  i
+    const R = this.real * temp.real
+    const I = this.imaginary 
+  }
+
 }
