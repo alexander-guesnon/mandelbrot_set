@@ -25,6 +25,11 @@ class complexNumbers {
     // i * -1 = -i
     // i * -i = -(-1) = 1
     // i * 1 =  i
+
+    // (a + bi )(c+di)
+    //a * c + bi * c + a * di + bi * di
+
+    
     const R = this.real * temp.real
     const I = this.imaginary 
   }
@@ -43,3 +48,5 @@ class complexNumbers {
     const I = this.imaginary 
   }
 }
+
+export default complexNumbers
