@@ -52,19 +52,30 @@ class Mandelbrot_set {
   maxIterations:number
   x:number
   y:number
-  canvas: number[][]
 
   constructor (start:number, maxIterations:number, x:number, y:number) {
-    this.start = start == undefined ? start: 0
-    this.maxIterations =  maxIterations == undefined ? start: 100
-    this.x =  x == undefined ? x : 100
-    this.y =  y == undefined ? y: 100
-    this.canvas = [[this.x],[this.y]]
-       
-      
+    this.start = start !== undefined ? start: 0
+    this.maxIterations =  maxIterations !== undefined ? start: 100
+    this.x =  x !== undefined ? x : 100
+    this.y =  y !== undefined ? y: 100
     }
+  private MB(n:number){
+    return n^2 + 1
+  }
+  private calc(){
+    let MBout = this.start
+    for (let i = 0; i < this.maxIterations; i++) {
+      MBout = this.MB(MBout)
+      if(MBout == -1){
+        break
+      }
+    }
+  }
   output(){
+    const canvas = [[this.x],[this.y]]
 
+
+    return canvas
   }
 
 }
