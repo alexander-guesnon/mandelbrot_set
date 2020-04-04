@@ -29,9 +29,12 @@ class complexNumbers {
     // (a + bi )(c+di)
     //a * c + bi * c + a * di + bi * di
 
-    
-    const R = this.real * temp.real
-    const I = this.imaginary 
+    let R = this.real * temp.real
+    let I = this.imaginary * temp.real
+
+    R -= this.imaginary * temp.imaginary
+    I +=  this.real * temp.imaginary
+    return new complexNumbers(R,I)
   }
   divide(temp:complexNumbers){
     /**
