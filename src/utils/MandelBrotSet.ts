@@ -46,7 +46,7 @@ output canvase
 
 
 
-
+import complexNumbers from './complex-num'
 class Mandelbrot_set {
   start:number
   maxIterations:number
@@ -59,21 +59,30 @@ class Mandelbrot_set {
     this.x =  x !== undefined ? x : 100
     this.y =  y !== undefined ? y: 100
     }
-  private MB(n:number){
-    return n^2 + 1
+  private MBequation(n:complexNumbers){
+    const square = n.multiply(n)
+    return square.add(new complexNumbers(1,0))
   }
   private calc(){
-    let MBout = this.start
+    let MBout = new complexNumbers(this.start,0)
     for (let i = 0; i < this.maxIterations; i++) {
-      MBout = this.MB(MBout)
-      if(MBout == -1){
+      MBout = this.MBequation(MBout)
+      if(false){
         break
       }
     }
   }
+  /**scope
+   * x axis = -2 - 1 = real numbers
+    * y axis = -1 - 1 = imaginary 
+  //left bottom (-2, -1)
+  //left top (-2,1)
+  //right bottom (1, -1)
+  //right top (1,1)
+   */
   output(){
     const canvas = [[this.x],[this.y]]
-
+    
 
     return canvas
   }
