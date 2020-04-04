@@ -1,70 +1,42 @@
-/*
-https://en.wikipedia.org/wiki/Mandelbrot_set
-
-math notes
-
- z_n+1 = (z_n)^2 + c
- c and z are complex numbers
- z_n
- n = 0 || positive integer
- z_0 = 0
-
- c is in the Mandelbrot set
-
-c is in the Mandelbrot set if the absolute value of zn never becomes larger 
-c = MB when c < |z_n|
-ex
-c = 1
-n = 0
-f(n) = (n)^2 + 1
-f(0) = 0^2 + 1 = 1
-f(1) ...
-
-explod us 
-infinty is MB = black
-
-
-
-n = goes to infinity
-high n is the more accurate the image is
-
-
-c is on the complex plane
-
-x axis = -2 - 1 = real numbers
-y axis = -1 - 1 = imaginary 
-
-
-n is start 
-
-m max iteration
-
-
-
-output canvase 
-*/
-
-
-
 import complexNumbers from './complex-num'
-class Mandelbrot_set {
-  start:number
-  maxIterations:number
-  x:number
-  y:number
 
-  constructor (start:number, maxIterations:number, x:number, y:number) {
-    this.start = start !== undefined ? start: 0
-    this.maxIterations =  maxIterations !== undefined ? start: 100
-    this.x =  x !== undefined ? x : 100
-    this.y =  y !== undefined ? y: 100
+export class axis {
+  min:number
+  max:number
+  pixels:number
+
+  constructor(min:number, max:number, pixles:number){
+    this.min = min
+    this.max = max
+    this.pixels = pixles
+  }
+  transform(location:number){
+    const axisLength = Math.abs(this.min) + Math.abs(this.max)
+    const pixleLength =  axisLength / this.pixels
+
+    return pixleLength
+  }
+
+}
+
+class Mandelbrot_set {
+  maxIterations:number
+  x:axis
+  y:axis
+
+  constructor (maxIterations:number, x:axis, y:axis) {
+    this.maxIterations =  maxIterations !== undefined ? maxIterations: 100
+    this.x = x !== undefined ? x : new axis(-2, 1, 300)
+    this.y = y !== undefined ? y : new axis(-1, 1, 200)
     }
+
   private MBequation(n:complexNumbers){
     const square = n.multiply(n)
     return square.add(new complexNumbers(1,0))
   }
-  private calc(){
-    let MBout = new complexNumbers(this.start,0)
+
+  private calc(x:number, y:number){
+    let MBout = new complexNumbers(x,y)
     for (let i = 0; i < this.maxIterations; i++) {
       MBout = this.MBequation(MBout)
       if(false){
@@ -72,16 +44,11 @@ class Mandelbrot_set {
       }
     }
   }
-  /**scope
-   * x axis = -2 - 1 = real numbers
-    * y axis = -1 - 1 = imaginary 
-  //left bottom (-2, -1)
-  //left top (-2,1)
-  //right bottom (1, -1)
-  //right top (1,1)
-   */
+
+
   output(){
-    const canvas = [[this.x],[this.y]]
+    const canvas = [[this.x.pixels],[this.y.pixels]]
+    
     
 
     return canvas
