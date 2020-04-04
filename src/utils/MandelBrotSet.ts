@@ -34,7 +34,31 @@ c is on the complex plane
 x axis = -2 - 1 = real numbers
 y axis = -1 - 1 = imaginary 
 
-*/
-function mandlebrot_set () {
 
+n is start 
+
+m max iteration
+
+
+
+output canvase 
+*/
+
+
+
+
+class Mandelbrot_set {
+  start:number
+  maxIterations:number
+  x:number
+  y:number
+
+  constructor (start:number, maxIterations:number, x:number, y:number) {
+    this.start = 0
+    this.maxIterations = 100
+    this.x = 100
+    this.y = 100
+
+  }
 }
+
