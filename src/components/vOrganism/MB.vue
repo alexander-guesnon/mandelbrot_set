@@ -1,22 +1,22 @@
 <template>
   <div class="MB">
     <h1>{{ title }}</h1>
-    <VControls /><vImage />
+    <VControls />
+    <vImage />
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, } from "vue-property-decorator"
-import vImage from "../vAtom/vImage.vue"
-import VControls from "../vMolecule/vControls.vue"
-
+import { Component, Vue } from "vue-property-decorator";
+import vImage from "../vAtom/vImage.vue";
+import VControls from "../vMolecule/vControls.vue";
 
 @Component({
-      computed: {
-       title(){
-         return this.$store.getters.title
-       } 
-     },
-    components: {
+  computed: {
+    title() {
+      return this.$store.getters.title;
+    }
+  },
+  components: {
     VControls,
     vImage
   }

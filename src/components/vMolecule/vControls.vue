@@ -1,29 +1,37 @@
 <template>
   <div class="vControls">
     <template>
-    <VButton 
-      v-for="(b, index) in buttons"
-      @click="buttonClick(b.action)"
-      :key="index"
-      > {{b.icon}} </VButton>
+      <VButton v-for="(b, index) in buttons" @click="buttonClick(b.action)" :key="index">{{b.icon}}</VButton>
     </template>
   </div>
 </template>
 <script lang="ts">
+import { mapMutations } from "vuex";
 import { Component, Vue } from "vue-property-decorator";
+import {
+  RESTART,
+  SLEEP,
+  ZOOM_IN,
+  ZOOM_OUT,
+  UP,
+  RIGHT,
+  DOWN,
+  LEFT
+} from "../../store/type/mutations";
 import VButton from "../vAtom/vButton.vue";
 @Component({
   components: {
     VButton
   },
-  methods:{
+  methods: {
+    ...mapMutations([RESTART, SLEEP, ZOOM_IN, ZOOM_OUT, UP, RIGHT, DOWN, LEFT]),
     buttonClick: function(action) {
-      this.$store.dispatch(action)
+      this.$store.dispatch(action);
     }
   },
-  computed:{
+  computed: {
     buttons: function() {
-      return this.$store.getters.buttons
+      return this.$store.getters.buttons;
     }
   }
 })

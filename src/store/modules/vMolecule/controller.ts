@@ -8,7 +8,7 @@ import {
     RIGHT,
     DOWN,
     LEFT
-} from '../action'
+} from '../../type/mutations'
 
  const initController = function(){
         const output = []
@@ -64,35 +64,16 @@ import {
     ZOOM_OUT(context:any){context.commit(ZOOM_OUT)}
   }
 
-  
+  // same for actions
   const mutations = {
-    RESTART(state:any){
-      console.log(RESTART)
-    },
-    UP(state:any){
-      console.log(UP)
-    },
-    SLEEP(state:any){
-      console.log(SLEEP)
-    },
-    LEFT(state:any){
-      console.log(LEFT)
-    },
-    FREE(state:any){
-      console.log("FREE")
-    },
-    RIGHT(state:any){
-      console.log(RIGHT)
-    },
-    ZOOM_IN(state:any){
-      console.log(ZOOM_IN)
-    },
-    DOWN(state:any){
-      console.log(DOWN)
-    },
-    ZOOM_OUT(state:any){
-      console.log(ZOOM_OUT)
-    }
+    [RESTART](){console.log('ssss')},
+    [SLEEP](){},
+    [ZOOM_IN](){},
+    [ZOOM_OUT](){},
+    [UP](){},
+    [RIGHT](){},
+    [DOWN](){},
+    [LEFT](){}
 }
 
   export default {
