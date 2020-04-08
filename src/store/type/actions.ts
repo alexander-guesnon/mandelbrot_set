@@ -7,5 +7,3 @@ export const  VUP = "Vup"
 export const  VDOWN  = "Vdown"
 export const  VLEFT = "Vleft"
 export const  VRIGHT = "Vright"
-
-export default actions
