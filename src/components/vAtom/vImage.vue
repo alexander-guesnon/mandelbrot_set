@@ -1,17 +1,30 @@
 <template>
-  <canvas class="vImage" :width="vWidth" :height="vHight"></canvas>
+  <canvas class="vImage" :width="x" :height="y"></canvas>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  data: () => {
-    return {
-      vWidth: 300,
-      vHight: 300
-    };
+import { Vue, Component } from "vue-property-decorator";
+import { mapState } from "vuex";
+import { REFRESH } from "../../store/constants";
+@Component({
+  computed: mapState({
+    canvas: function(state: any) {
+      return state.MB.Image.Canvas.canvas;
+    },
+    x: function(state: any) {
+      return state.MB.Image.Canvas.x;
+    },
+    y: function(state: any) {
+      return state.MB.Image.Canvas.y;
+    }
+  }),
+  methods: {
+    refresh: function(action: string) {
+      this.$store.dispatch(action);
+    }
   }
-});
+})
+export default class VImage extends Vue {}
 </script>
 
 <style lang="sass">

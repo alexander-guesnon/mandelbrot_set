@@ -1,12 +1,6 @@
 import Controller from '../vMolecule/controller'
 import Image from '../vAtom/image'
 
-
-class MB {
-  
-}
-
-
 const state = {
 
 }
@@ -27,6 +21,7 @@ export default {
   actions,
   getters,
   modules: {
-    Controller
+    Controller,
+    Image
   }
 }

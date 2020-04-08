@@ -8,7 +8,7 @@ import {
     RIGHT,
     DOWN,
     LEFT
-} from '../constants'
+} from '../action'
 
  const initController = function(){
         const output = []
@@ -44,52 +44,53 @@ import {
 
  const state = {
    Buttons: initController()
+
   }
   const getters = {
-    buttons (state:any){
+    buttons: function(state:any){
       return state.Buttons
     }
   }
   
   const actions = {
-    RESTART(context){context.commit(RESTART)},
-    UP(context){context.commit(UP)},
-    SLEEP(context){context.commit(SLEEP)},
-    LEFT(context){context.commit(LEFT)},
-    FREE(context){context.commit("FREE")},
-    RIGHT(context){context.commit(RIGHT)},
-    ZOOM_IN(context){context.commit(ZOOM_IN)},
-    DOWN(context){context.commit(DOWN)},
-    ZOOM_OUT(context){context.commit(ZOOM_OUT)}
+    RESTART(context:any){context.commit(RESTART)},
+    UP(context:any){context.commit(UP)},
+    SLEEP(context:any){context.commit(SLEEP)},
+    LEFT(context:any){context.commit(LEFT)},
+    FREE(context:any){context.commit("FREE")},
+    RIGHT(context:any){context.commit(RIGHT)},
+    ZOOM_IN(context:any){context.commit(ZOOM_IN)},
+    DOWN(context:any){context.commit(DOWN)},
+    ZOOM_OUT(context:any){context.commit(ZOOM_OUT)}
   }
 
   
   const mutations = {
-    RESTART(state){
+    RESTART(state:any){
       console.log(RESTART)
     },
-    UP(state){
+    UP(state:any){
       console.log(UP)
     },
-    SLEEP(state){
+    SLEEP(state:any){
       console.log(SLEEP)
     },
-    LEFT(state){
+    LEFT(state:any){
       console.log(LEFT)
     },
-    FREE(state){
+    FREE(state:any){
       console.log("FREE")
     },
-    RIGHT(state){
+    RIGHT(state:any){
       console.log(RIGHT)
     },
-    ZOOM_IN(state){
+    ZOOM_IN(state:any){
       console.log(ZOOM_IN)
     },
-    DOWN(state){
+    DOWN(state:any){
       console.log(DOWN)
     },
-    ZOOM_OUT(state){
+    ZOOM_OUT(state:any){
       console.log(ZOOM_OUT)
     }
 }
