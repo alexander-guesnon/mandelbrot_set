@@ -4,15 +4,13 @@
     <slot>I'm a button</slot>
   </button>
 </template>
-<style lang="sass">
 
-</style>
 <script lang="ts">
-import { Component, Vue, } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 @Component({
   methods: {
     ClickAction(){
-      this.$emit('click')
+      this.$emit("click");
     }
   }
 })

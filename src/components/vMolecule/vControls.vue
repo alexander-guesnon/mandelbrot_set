@@ -1,7 +1,7 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton v-for="(b, index) in buttons" @click="buttonClick(b.action)" :key="index">{{b.icon}}</VButton>
+      <VButton @click="[RESTART]" ></VButton>love</VButton>
     </template>
   </div>
 </template>
@@ -17,8 +17,8 @@ import {
   RIGHT,
   DOWN,
   LEFT
-} from "../../store/type/mutations";
-import VButton from "../vAtom/vButton.vue";
+} from "@/store/type";
+import VButton from "@/components/vAtom/vButton.vue"
 @Component({
   components: {
     VButton
@@ -42,7 +42,7 @@ export default class VControls extends Vue {}
 .vControls
   height: 300px
   width: 300px
-  display: grid 
+  display: grid
 .vButton
   margin: 30px
   display: inline-grid

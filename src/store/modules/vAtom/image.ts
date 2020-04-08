@@ -1,6 +1,4 @@
-import {
-  REFRESH
-} from '../action'
+import { RESTART } from '@/store/type'
 
 class Image {
     x:number
