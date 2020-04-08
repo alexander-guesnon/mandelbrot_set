@@ -1,7 +1,7 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton @click="[RESTART]" ></VButton>love</VButton>
+      <VButton @click="[RESTART]" >love</VButton>
     </template>
   </div>
 </template>
