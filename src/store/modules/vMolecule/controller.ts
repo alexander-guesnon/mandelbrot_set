@@ -1,20 +1,13 @@
 import Button from "../vAtom/button";
-import {RESTART,
-UP,
-SLEEP,
-LEFT,
-RIGHT,
-ZOOM_IN,
-DOWN,
-ZOOM_OUT } from "../../type/actions";
-const ACTIONS = Array(RESTART,
-  UP,
-  SLEEP,
-  LEFT,
-  RIGHT,
-  ZOOM_IN,
-  DOWN,
-  ZOOM_OUT)
+import * as A from "../../type/actions";
+const ACTIONS = Array(A.RESTART,
+A.UP,
+  A.SLEEP,
+  A.LEFT,
+  A.RIGHT,
+  A.ZOOM_IN,
+  A.DOWN,
+  A.ZOOM_OUT)
 //make class
 const initController = function() {
   const output = [];
