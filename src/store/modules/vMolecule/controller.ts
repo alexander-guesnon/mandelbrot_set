@@ -1,6 +1,7 @@
 import Button from "../vAtom/button";
+import * as M from "../../type/mutations";
 import * as A from "../../type/actions";
-const ACTIONS = Array(A.RESTART,
+const ACTIONS:Array<string> = Array(A.RESTART,
 A.UP,
   A.SLEEP,
   A.LEFT,
@@ -8,7 +9,15 @@ A.UP,
   A.ZOOM_IN,
   A.DOWN,
   A.ZOOM_OUT)
-//make class
+  const MUTATIONS:Array<string> = Array(M.RESTART,
+    M.UP,
+      M.SLEEP,
+      M.LEFT,
+      M.RIGHT,
+      M.ZOOM_IN,
+      M.DOWN,
+      M.ZOOM_OUT)
+  //make class
 const initController = function() {
   const output = [];
   const NUM_BUTTONS = 9;
@@ -29,7 +38,17 @@ const getters = {
   }
 };
 
-const actions = {
+
+function initActions(){
+  const output: any = {}
+  const length = ACTIONS.length
+
+  return output
+}
+
+const actions = {...initActions()}
+
+
   [RESTART](context: any) {
     context.commit(M_RESTART);
   },
