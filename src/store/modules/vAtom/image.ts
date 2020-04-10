@@ -36,7 +36,7 @@ const mutations = {
 const actions = {
    REFRESH (context:any)
    {
-     context.commit(REFRESH,)
+     context.commit(REFRESH)
     }
 }
 

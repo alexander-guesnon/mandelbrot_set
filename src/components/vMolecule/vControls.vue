@@ -1,12 +1,11 @@
 <template>
   <div class="vControls">
     <template>
-      <VButton @click="[RESTART]" >love</VButton>
+      <VButton @click="[RESTART]">love</VButton>
     </template>
   </div>
 </template>
 <script lang="ts">
-import { mapMutations } from "vuex";
 import { Component, Vue } from "vue-property-decorator";
 import {
   RESTART,
@@ -17,14 +16,13 @@ import {
   RIGHT,
   DOWN,
   LEFT
-} from "@/store/type";
-import VButton from "@/components/vAtom/vButton.vue"
+} from "@/store/type/actions";
+import VButton from "@/components/vAtom/vButton.vue";
 @Component({
   components: {
     VButton
   },
   methods: {
-    ...mapMutations([RESTART, SLEEP, ZOOM_IN, ZOOM_OUT, UP, RIGHT, DOWN, LEFT]),
     buttonClick: function(action) {
       this.$store.dispatch(action);
     }
