@@ -1,6 +1,7 @@
-import Button from "../vAtom/button";
-import * as M from "../../type/mutations";
-import * as A from "../../type/actions";
+import Button from "../vAtom/button"
+import * as M from "../../type/mutations"
+import * as A from "../../type/actions"
+
 const ACTIONS:Array<string> = Array(A.RESTART,
 A.UP,
   A.SLEEP,
@@ -9,6 +10,7 @@ A.UP,
   A.ZOOM_IN,
   A.DOWN,
   A.ZOOM_OUT)
+  
   const MUTATIONS:Array<string> = Array(M.RESTART,
     M.UP,
       M.SLEEP,
@@ -29,6 +31,33 @@ const initController = function() {
   return output;
 };
 
+
+function mapAcionToCommit(context: any){
+  const output: any = {}
+  const length = ACTIONS.length
+  for (let i = 0; i < length; i++){
+  const a = ACTIONS[i]
+  const m = MUTATIONS[i]
+  Object.defineProperty(output,a,() => {
+    context.commit(m);
+  })
+}
+  return output
+}
+
+function mapMutationsToLog(){
+  const output: any = {}
+  const length = MUTATIONS.length
+  for (let i = 0; i < length; i++){
+  const m = MUTATIONS[i]
+  Object.defineProperty(output,m,() => {
+    console.log(m)
+  })
+}
+  return output
+}
+
+
 const state = {
   Buttons: initController()
 };
@@ -38,73 +67,9 @@ const getters = {
   }
 };
 
+const actions = { ...mapAcionToCommit(context) }
 
-function initActions(){
-  const output: any = {}
-  const length = ACTIONS.length
-
-  return output
-}
-
-const actions = {...initActions()}
-
-
-  [RESTART](context: any) {
-    context.commit(M_RESTART);
-  },
-  [UP](context: any) {
-    context.commit(M_UP);
-  },
-  [SLEEP](context: any) {
-    context.commit(M_SLEEP);
-  },
-  [LEFT](context: any) {
-    context.commit(M_LEFT);
-  },
-  FREE(context: any) {
-    context.commit("FREE");
-  },
-  [RIGHT](context: any) {
-    context.commit(M_RIGHT);
-  },
-  [ZOOM_IN](context: any) {
-    context.commit(M_ZOOM_IN);
-  },
-  [DOWN](context: any) {
-    context.commit(M_DOWN);
-  },
-  [ZOOM_OUT](context: any) {
-    context.commit(M_ZOOM_OUT);
-  }
-};
-
-// same for actions
-const mutations = {
-  [M_RESTART]() {
-    console.log(M_RESTART);
-  },
-  [M_SLEEP]() {
-    console.log(M_SLEEP);
-  },
-  [M_ZOOM_IN]() {
-    console.log(M_ZOOM_IN);
-  },
-  [M_ZOOM_OUT]() {
-    console.log(M_ZOOM_OUT);
-  },
-  [M_UP]() {
-    console.log(M_UP);
-  },
-  [M_RIGHT]() {
-    console.log(M_RIGHT);
-  },
-  [M_DOWN]() {
-    console.log(M_DOWN);
-  },
-  [M_LEFT]() {
-    console.log(M_LEFT);
-  }
-};
+const mutations = { ...mapMutationsToLog() }
 
 export default {
   state,
