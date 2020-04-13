@@ -7,4 +7,4 @@ export const  UP = "UP";
 export const  DOWN = "DOWN";
 export const  LEFT = "LEFT";
 export const  RIGHT = "RIGHT";
-export default [RESTART, SLEEP, ZOOM_IN, ZOOM_OUT, UP, DOWN, LEFT, RIGHT];
+export const REFRESH = "REFRESH";

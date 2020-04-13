@@ -5,7 +5,7 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import { mapState } from "vuex";
-import { REFRESH } from "../../store/constants";
+import { REFRESH } from "@/store/type/actions";
 @Component({
   computed: mapState({
     canvas: function(state: any) {

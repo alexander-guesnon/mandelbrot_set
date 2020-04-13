@@ -1,5 +1,5 @@
-import { RESTART } from '@/store/type'
-
+import * as A from '@/store/type/actions'
+import * as M from '@/store/type/mutations'
 class Image {
     x:number
     y:number
@@ -28,15 +28,15 @@ const getters = {
 }
 
 const mutations = {
- REFRESH(){
-  console.log(REFRESH)
+ [M.REFRESH](){
+  console.log(M.REFRESH)
  }
 }
 
 const actions = {
-   REFRESH (context:any)
+   [A.REFRESH] (context:any)
    {
-     context.commit(REFRESH)
+     context.commit(M.REFRESH)
     }
 }
 

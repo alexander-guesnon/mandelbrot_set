@@ -7,3 +7,4 @@ export const  UP = "MUTATION_UP"
 export const  DOWN  = "MUTATION_DOWN"
 export const  LEFT = "MUTATION_LEFT"
 export const  RIGHT = "MUTATION_RIGHT"
+export const REFRESH = "MUTATION_REFRESH";
