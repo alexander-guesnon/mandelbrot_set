@@ -1,5 +1,5 @@
-import Controller from '../vMolecule/controller'
-import Image from '../vAtom/image'
+import Controller from './vMolecule/controller'
+import Image from './vMolecule/vAtom/image'
 
 const state = {
 // this will be all the atrabutest of the aculke mb all blow are abstractions

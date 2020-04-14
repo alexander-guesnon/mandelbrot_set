@@ -17,7 +17,7 @@ import {
   DOWN,
   LEFT
 } from "@/store/type/actions";
-import VButton from "@/components/vAtom/vButton.vue";
+import VButton from "./vAtom/vButton.vue";
 @Component({
   components: {
     VButton
