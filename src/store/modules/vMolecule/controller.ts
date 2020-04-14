@@ -1,6 +1,6 @@
 import Button from "../vAtom/button";
-import * as M from "../../type/mutations";
-import * as A from "../../type/actions";
+import * as M from "@/store/type/mutations";
+import * as A from "@/store/type/actions";
 
 const ACTIONS: Array<string> = [
   A.RESTART,
@@ -35,13 +35,13 @@ const initController = function() {
   return output;
 };
 
-function mapAcionToCommit(context: any) {
-  const output: any = {};
+function mapActionToCommit() {
+  const output = {};
   const length = ACTIONS.length;
   for (let i = 0; i < length; i++) {
     const a = ACTIONS[i];
     const m = MUTATIONS[i];
-    Object.defineProperty(output, a, () => {
+    Object.defineProperty(output, a, function(context: any) {
       context.commit(m);
     });
   }
@@ -69,7 +69,7 @@ const getters = {
   }
 };
 
-const actions = {};
+const actions =  { ...mapActionToCommit() };
 
 const mutations = { ...mapMutationsToLog() };
 
