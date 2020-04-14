@@ -1,4 +1,4 @@
-import Button from "./vAtom/button";
+import Button from "../vAtom/store/button";
 import * as M from "@/store/type/mutations";
 import * as A from "@/store/type/actions";
 
