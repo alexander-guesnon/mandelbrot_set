@@ -9,11 +9,12 @@
 import { Component, Vue } from "vue-property-decorator";
 import vImage from "./vMolecule/vAtom/vImage.vue";
 import VControls from "./vMolecule/vControls.vue";
+import store from "./store";
 
 @Component({
   computed: {
     title() {
-      return this.$store.getters.title;
+      return store.state.title;
     }
   },
   components: {
