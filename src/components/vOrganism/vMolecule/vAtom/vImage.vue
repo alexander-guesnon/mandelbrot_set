@@ -1,5 +1,5 @@
 <template>
-  <canvas class="vImage" :width="x" :height="y"></canvas>
+  <canvas id="vImage" :width="x" :height="y"></canvas>
 </template>
 
 <script lang="ts">
@@ -29,7 +29,7 @@ export default class VImage extends Vue {}
 
 <style lang="sass">
 
-.vImage
+#vImage
   border-style: solid
   border-color: black
   border-width: 1px

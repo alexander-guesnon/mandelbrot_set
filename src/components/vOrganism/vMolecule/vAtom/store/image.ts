@@ -11,13 +11,14 @@ class Image {
       const temp2 = new Array<number>(y)
       temp2.fill(0)
       this.canvas = temp.fill(temp2)
+      }
     }
-}
+
 
 const InitScreen = (x:number, y:number) => {
 return new Image(x,y)
 }
-
+//set scale
 const state = {
   Canvas: InitScreen(300,150)
 }
