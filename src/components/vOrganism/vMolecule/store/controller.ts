@@ -1,28 +1,7 @@
 import Button from "../vAtom/store/button";
-import * as M from "@/store/type/mutations";
-import * as A from "@/store/type/actions";
+import MUTATIONS from "./types/mutations";
+import ACTIONS from "./types/actions";
 
-const ACTIONS: Array<string> = [
-  A.RESTART,
-  A.UP,
-  A.SLEEP,
-  A.LEFT,
-  A.RIGHT,
-  A.ZOOM_IN,
-  A.DOWN,
-  A.ZOOM_OUT
-]
-
-const MUTATIONS: Array<string> = [
-  M.RESTART,
-  M.UP,
-  M.SLEEP,
-  M.LEFT,
-  M.RIGHT,
-  M.ZOOM_IN,
-  M.DOWN,
-  M.ZOOM_OUT
-]
 //make class
 const initController = function() {
   const output:Array<Button> = [];
