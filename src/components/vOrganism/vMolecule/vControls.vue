@@ -7,16 +7,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import {
-  RESTART,
-  SLEEP,
-  ZOOM_IN,
-  ZOOM_OUT,
-  UP,
-  RIGHT,
-  DOWN,
-  LEFT
-} from "@/store/type/actions";
+import ACTIONS from "./store/types/actions";
 import VButton from "./vAtom/vButton.vue";
 @Component({
   components: {

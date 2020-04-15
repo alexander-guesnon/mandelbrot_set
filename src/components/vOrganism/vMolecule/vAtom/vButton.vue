@@ -11,6 +11,7 @@ import { Component, Vue } from "vue-property-decorator";
   methods: {
     ClickAction(){
       this.$emit("click");
+      //click in state
     }
   }
 })
