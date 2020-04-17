@@ -5,14 +5,16 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import { REFRESH, INIT } from "./store/types/actions";
-class VImage extends Vue {
-  constructor() {
-    super();
-  }
-  store = this.$store
-}
+import { mapState } from 'vuex'
+@Component({
+  computed:mapState({
+    x: (state: any) => state.Image.Canvas.x,
+    y: (state: any) =>  state.Image.Canvas.y
+  })
+})
+class VImage extends Vue {}
 
-export default VImage
+export default VImage;
 </script>
 
 <style lang="sass">

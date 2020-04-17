@@ -9,14 +9,12 @@
 import { Component, Vue } from "vue-property-decorator";
 import vImage from "./vMolecule/vAtom/vImage.vue";
 import VControls from "./vMolecule/vControls.vue";
-import store from "./store";
+import {mapState} from "vuex";
 
 @Component({
-  computed: {
-    title() {
-      return store.state.title;
-    }
-  },
+  computed: mapState({
+    title: (state: any) => state.title
+  }),
   components: {
     VControls,
     vImage
