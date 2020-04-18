@@ -1,60 +1,55 @@
-import Button from "../vAtom/store/button";
-import MUTATIONS from "./types/mutations";
-import ACTIONS from "./types/actions";
-
-//make class
-const initController = function() {
-  const output:Array<Button> = [];
-  const NUM_BUTTONS = 9;
-  const icons = ["♻️", "⬆️", "💤", "⬅️", "🃏", "➡️", "➕", "⬇️", "➖"];
-  const listOfAction = [...ACTIONS, "FREE"];
-  for (let i = 0; i < NUM_BUTTONS; i++) {
-    output.push(new Button(icons[i], listOfAction[i]));
-  }
-  return output;
-};
-
-function mapActionToCommit() {
-  const output = {};
-  const length = ACTIONS.length;
-  for (let i = 0; i < length; i++) {
-    const a = ACTIONS[i];
-    const m = MUTATIONS[i];
-    Object.defineProperty(output, a, function(context: any) {
-      context.commit(m);
-    });
-  }
-  return output;
-}
-
-function mapMutationsToLog() {
-  const output: any = {};
-  const length = MUTATIONS.length;
-  for (let i = 0; i < length; i++) {
-    const m = MUTATIONS[i];
-    Object.defineProperty(output, m, () => {
-      console.log(m);
-    });
-  }
-  return output;
-}
+import Button from "./vAtom/button";
+import * as M from "@/constants/vControls/mutations";
+import * as A from "@/constants/vControls/actions";
 
 const state = {
-  Buttons: initController()
-};
-const getters = {
-  buttons: function(state: any) {
-    return state.Buttons;
-  }
+  Buttons: 2,
 };
 
-const actions =  { ...mapActionToCommit() };
+const actions = {
+  [A.DOWN](context: any) {
+    context.commit(M.DOWN);
+  },
+  [A.LEFT](context: any) {
+    context.comit(M.LEFT);
+  },
+  [A.REFRESH](context: any) {
+    context.comit(M.REFRESH);
+  },
+  [A.RESTART](context: any) {
+    context.comit(M.RESTART);
+  },
+  [A.RIGHT](context: any) {
+    context.comit(M.RIGHT);
+  },
+  [A.SLEEP](context: any) {
+    context.comit(M.SLEEP);
+  },
+  [A.UP](context: any) {
+    context.comit(M.UP);
+  },
+  [A.ZOOM_IN](context: any) {
+    context.comit(M.ZOOM_IN);
+  },
+  [A.ZOOM_OUT](context: any) {
+    context.comit(M.ZOOM_OUT);
+  },
+};
 
-const mutations = { ...mapMutationsToLog() };
+const mutations = {
+  [M.DOWN]() {},
+  [M.LEFT]() {},
+  [M.REFRESH]() {},
+  [M.RESTART]() {},
+  [M.RIGHT]() {},
+  [M.SLEEP]() {},
+  [M.UP]() {},
+  [M.ZOOM_IN]() {},
+  [M.ZOOM_OUT]() {},
+};
 
 export default {
   state,
   mutations,
   actions,
-  getters
 };

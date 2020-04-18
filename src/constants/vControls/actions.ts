@@ -8,3 +8,14 @@ export const  DOWN = "DOWN";
 export const  LEFT = "LEFT";
 export const  RIGHT = "RIGHT";
 export const REFRESH = "REFRESH";
+
+export default [REFRESH,
+    RESTART,
+    SLEEP,
+    ZOOM_IN,
+    ZOOM_OUT,
+    UP,
+    DOWN,
+    LEFT,
+    RIGHT,
+]

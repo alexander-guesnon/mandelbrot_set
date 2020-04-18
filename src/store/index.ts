@@ -1,6 +1,6 @@
 import Vue from "vue"
 import Vuex from "vuex"
-import MB from "@/components/root_store"
+import MB from "./vOrganism"
 Vue.use(Vuex);
 
 export default new Vuex.Store(MB);
