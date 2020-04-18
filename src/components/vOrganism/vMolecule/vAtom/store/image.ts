@@ -4,15 +4,20 @@ class Screen {
     x:number
     y:number
     id:string
-    canvas: number[][]
+    canvas:HTMLCanvasElement
+    ctx:CanvasRenderingContext2D
+
     constructor (x:number, y:number, id:string){
       this.x = x
       this.y = y
       this.id = id
-      const temp = new Array<Array<number>>(x)
-      const temp2 = new Array<number>(y)
-      temp2.fill(0)
-      this.canvas = temp.fill(temp2)
+      }
+      init(){
+        // get element by id
+        // fill in context with black
+      }
+      refresh(screenDATA){
+      //refresh takes in screen data and outputs a canvas refresh
       }
     }
 
