@@ -1,3 +1,0 @@
-//CONSTANTS MUTATION
-export const INIT = "MUTATION_INIT";
-export const REFRESH = "MUTATION_REFRESH";
