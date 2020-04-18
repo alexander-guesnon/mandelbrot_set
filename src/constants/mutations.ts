@@ -1,1 +1,1 @@
-export default from './vOrganism/mutations.ts'
+export * from './vOrganism/mutations'
