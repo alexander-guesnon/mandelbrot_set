@@ -1,5 +1,5 @@
-import * as A from './types/actions'
-import * as M from './types/mutations'
+import * as A from '@/constants/vImage/actions'
+import * as M from '@/constants/vImage/mutations'
 class Screen {
     x:number
     y:number
@@ -11,12 +11,14 @@ class Screen {
       this.x = x
       this.y = y
       this.id = id
+      this.canvas = new HTMLCanvasElement()
+      this.ctx = <CanvasRenderingContext2D> this.canvas.getContext("2d")
       }
       init(){
         // get element by id
         // fill in context with black
       }
-      refresh(screenDATA){
+      refresh(screenDATA:any){
       //refresh takes in screen data and outputs a canvas refresh
       }
     }

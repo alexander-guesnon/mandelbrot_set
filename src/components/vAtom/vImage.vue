@@ -4,7 +4,7 @@
 //init canvas // set canvas class
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-import { REFRESH, INIT } from "./store/types/actions";
+import { REFRESH, INIT } from "@/constants/vImage/actions";
 import { mapState } from 'vuex'
 @Component({
   computed:mapState({

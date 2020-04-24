@@ -1,4 +1,5 @@
-import * as vMolecule from './vMolecule/mutations'
-import * as MB from './MB/mutations'
+export const REFRESH = "M_REFRESH"
+export const INIT = "M_INIT"
 
-export default {vMolecule, MB}
+export default {REFRESH, INIT}
+

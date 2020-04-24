@@ -7,8 +7,8 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import vImage from "./vMolecule/vAtom/vImage.vue";
-import VControls from "./vMolecule/vControls.vue";
+import vImage from "../vAtom/vImage.vue";
+import VControls from "../vMolecule/vControls.vue";
 import {mapState} from "vuex";
 
 @Component({

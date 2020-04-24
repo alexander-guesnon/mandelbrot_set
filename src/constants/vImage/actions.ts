@@ -1,4 +1,6 @@
-import * as vMolecule from './vMolecule/actions'
-import * as MB from './MB/actions'
+export const REFRESH = "REFRESH"
+export const INIT = "INIT"
 
-export { vMolecule, MB }
+
+
+export default {REFRESH, INIT}
