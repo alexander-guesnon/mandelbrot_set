@@ -1,12 +1,6 @@
-<template>
-  <div id="app">
-    <MB />
-  </div>
-</template>
-
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import MB from "./components/vOrganism/MB.vue";
+import MB from "@/components/vOrganism/MB.vue";
 
 @Component({
   components: {
@@ -15,6 +9,12 @@ import MB from "./components/vOrganism/MB.vue";
 })
 export default class App extends Vue {}
 </script>
+
+<template>
+  <div id="app">
+    <MB />
+  </div>
+</template>
 
 <style lang="sass">
 #app

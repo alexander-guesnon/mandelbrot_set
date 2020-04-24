@@ -7,7 +7,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import * as A from "@/constants/vControls/actions"
+import * as A from "@/constants/vControls/actions";
 import VButton from "../vAtom/vButton.vue";
 @Component({
   components: {
@@ -15,7 +15,7 @@ import VButton from "../vAtom/vButton.vue";
   },
   methods: {
     buttonClick: function(action) {
-      this.$store.dispatch(action)
+      this.$store.dispatch(action);
     }
   },
   computed: {

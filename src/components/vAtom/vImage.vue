@@ -5,11 +5,11 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import { REFRESH, INIT } from "@/constants/vImage/actions";
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 @Component({
-  computed:mapState({
+  computed: mapState({
     x: (state: any) => state.Image.Canvas.x,
-    y: (state: any) =>  state.Image.Canvas.y
+    y: (state: any) => state.Image.Canvas.y
   })
 })
 class VImage extends Vue {}

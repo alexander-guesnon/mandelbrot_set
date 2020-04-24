@@ -1,15 +1,8 @@
-<template>
-  <div class="MB">
-    <h1>{{ title }}</h1>
-    <VControls />
-    <vImage />
-  </div>
-</template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import vImage from "../vAtom/vImage.vue";
 import VControls from "../vMolecule/vControls.vue";
-import {mapState} from "vuex";
+import { mapState } from "vuex";
 
 @Component({
   computed: mapState({
@@ -22,6 +15,14 @@ import {mapState} from "vuex";
 })
 export default class MB extends Vue {}
 </script>
+
+<template>
+  <div class="MB">
+    <h1>{{ title }}</h1>
+    <VControls />
+    <vImage />
+  </div>
+</template>
 
 <style lang="sass">
 .MB

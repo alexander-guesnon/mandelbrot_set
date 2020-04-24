@@ -1,6 +1,4 @@
-export const REFRESH = "REFRESH"
-export const INIT = "INIT"
+export const REFRESH = "REFRESH";
+export const INIT = "INIT";
 
-
-
-export default {REFRESH, INIT}
+export default { REFRESH, INIT };

@@ -1,5 +1,4 @@
-export const REFRESH = "M_REFRESH"
-export const INIT = "M_INIT"
+export const REFRESH = "M_REFRESH";
+export const INIT = "M_INIT";
 
-export default {REFRESH, INIT}
-
+export default { REFRESH, INIT };
